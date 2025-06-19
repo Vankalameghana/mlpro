@@ -35,3 +35,16 @@ Custom Exception Class
 | `exc_tb.tb_lineno`                                 | Gets the exact line number of the error                              | Example: `line 5`                                            |
 | `self.error_message = error_message_details(...)`  | Stores the final formatted error string in the object                | Used when you `print` the exception                          |
 | `__str__(self)`                                    | Returns the error message when exception is printed                  | Output: `Error in [main.py] at line [5] — division by zero`  |
+
+
+
+
+logging
+Logging helps you track your program’s behavior with messages saved in the console or file, useful for debugging and monitoring.
+| Line                            | What It Does                                                                |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| `from datetime import datetime` | Imports current time tool                                                   |
+| `LOG_FILE = ...`                | Makes a unique log file name using time                                     |
+| `os.makedirs(...)`              | Creates a `logs/` folder if it doesn’t exist                                |
+| `logging.basicConfig(...)`      | Tells Python to store logs in the file, with time, level, line number etc.  |
+| `level=logging.INFO`            | Sets log level — info and above will be logged (info, warning, error, etc.) |
